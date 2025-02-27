@@ -1,0 +1,34 @@
+<div>
+<div>
+        <a href="/boards">
+          Bulletin Board
+        </a>
+      </div>
+      <hr>
+  <div>
+    <h1>
+      <%= @the_board.name %>
+    </h1>
+<hr>
+</div>
+
+<h2>Add a new post</h2>
+
+<form action = "/insert_post" method = "post">
+  <div>
+    <label for = "title"> Title </label>
+    <input type = "text" id = "title" name = "title">
+  </div>
+  <div>
+    <label for = "body"> Body </label>
+    <input type = "text" id = "body" name = "body">
+  </div>
+  <div>
+    <label for = "expiry"> Expires on </label>
+    <input type = "date" id = "expiry" name = "expiry">
+  </div>
+
+  <button>
+    Add post
+  </button>
+</form>
