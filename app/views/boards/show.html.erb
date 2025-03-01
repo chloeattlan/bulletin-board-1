@@ -16,19 +16,76 @@
 
 <form action = "/insert_post" method = "post">
   <div>
-    <label for = "title"> Title </label>
-    <input type = "text" id = "title" name = "title">
+    <label for = "query_title"> Title </label>
+    <input type = "text" id = "query_title" name = "query_title">
   </div>
   <div>
-    <label for = "body"> Body </label>
-    <input type = "text" id = "body" name = "body">
+    <label for = "query_body"> Body </label>
+    <input type = "text" id = "query_body" name = "query_body">
   </div>
   <div>
-    <label for = "expiry"> Expires on </label>
-    <input type = "date" id = "expiry" name = "expiry">
+    <label for = "query_expires_on"> Expires on </label>
+    <input type = "date" id = "query_expires_on" name = "query_expires_on">
+  </div>
+  <div>
+    <label for = "query_board_id"> Board ID </label>
+    <input type = "text" id = "query_board_id" name = "query_board_id">
   </div>
 
   <button>
     Add post
   </button>
 </form>
+
+<hr>
+<h2> Active posts </h2>
+
+<table border = "1">
+  <tbody>
+    <tr> 
+      <th>Title</th>
+      <th>Body</th>
+      <th>Posted on</th>
+      <th>Expires on</th> 
+    </tr>
+    
+  </tbody>
+</table>
+
+<!---->
+<%# @list_of_posts.each do |a_post| %>
+<!--      <tr>
+        <td>
+          <%#= a_post.id %>-->
+<!--        </td>
+
+        <td>
+          <%#= a_post.title %>-->
+<!--        </td>
+
+        <td>
+          <%#= a_post.body %>-->
+<!--        </td>
+
+        <td>
+          <%#= a_post.expires_on %>-->
+<!--        </td>
+
+        <td>
+          <%#= a_post.board_id %>-->
+<!--        </td>
+
+        <td>
+          <%#= time_ago_in_words(a_post.created_at) %> ago-->
+<!--        </td>
+        <td>
+          <%#= time_ago_in_words(a_post.updated_at) %> ago-->
+<!--        </td>
+
+        <td>
+          <a href="/posts/<%#= a_post.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+-->
